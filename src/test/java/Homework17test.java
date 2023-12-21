@@ -40,7 +40,26 @@ public class Homework17test extends BaseTest {
         firstSong.click();
         Thread.sleep(  2000);
     }
-}
+    public void clickAddToBtn() throws InterruptedException {
+        WebElement addToButton = driver.findElement(By.xpath( "//section[@id='songResultswrapper']//button[@data-test='add-to-btn']"));
+        addToButton.click();
+        thread.sleep(2000);
+    }
 
+    public void choosePlaylist () throws InterruptedException {
+        // we created a playlist named "Hello"
+        WebElement playlist = driver.findElement(By.xpath(
+        "//section[@id='songResultswrapper']//li[contains(text(),Hello people')]"));
+        playlist.click();
+        thread.sleep(2000);
+    }
+
+   public String getAddToPlaylistSuccessMsg() {
+        WebElement notification = driver.dindElement(By.cssSelector("div.success.show"));
+        return notification.getText();
+   }
+
+
+}
 
 
