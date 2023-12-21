@@ -2,7 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class homework17test extends BaseTest {
+public class homework17 extends BaseTest {
 
     @Test
     public void addSongToPlaylist() throws InterruptedException {
@@ -14,12 +14,11 @@ public class homework17test extends BaseTest {
         clickSubmit();
         Thread.sleep(2000);
         searchSong("Dark Days");
-        viewAllButton();
-        firstSong();
-        addToButton();
-        selectPlaylisT();
-        getsongAddedToPlaylistSuccessMsg();
-        Assert.assertEquals(getSongAddedToPlaylistsuccessMsg(), songAddedMessage);
+        clickViewAllBtn();
+        selectFirstSongResult();
+        clickAddToBtn();
+        choosePlaylist();
+        Assert.assertEquals(getAddToPlaylistSuccessMsg(), expectedSongAddedMessage);
 
     }
 
@@ -48,15 +47,15 @@ public class homework17test extends BaseTest {
     }
 
     public void choosePlaylist() throws InterruptedException {
-        // we created a playlist named "Hello"
+        // we created a playlist named "Hello People"
         WebElement playlist = driver.findElement(By.xpath(
-                "//section[@id='songResultsWrapper']//li[contains(text(),'Hello people')]"));
+                "//section[@id='songResultsWrapper']//li[contains(text(),'Hello People')]"));
         playlist.click();
         Thread.sleep(2000);
     }
 
     public String getAddToPlaylistSuccessMsg() {
-        WebElement notification = driver.dindElement(By.cssSelector("div.success.show"));
+        WebElement notification = driver.findElement(By.cssSelector("div.success.show"));
         return notification.getText();
     }
 
