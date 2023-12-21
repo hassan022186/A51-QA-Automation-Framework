@@ -13,11 +13,11 @@ public class BaseTest {
     }
 
     public void navigateToPage() {
-        driver.get"https://qa.koel.app/"
+        driver.get("https://qa.koel.app/");
     }
 
     public void provideEmail(String email) {
-        WebElement emailField = driver.findElement(By.cssSelector("imput[type='email']"));
+        WebElement emailField = driver.findElement(By.cssSelector("input[type='email']"));
         emailField.clear();
         emailField.sendKeys(email);
     }
