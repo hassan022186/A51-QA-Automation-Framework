@@ -13,7 +13,7 @@ public class BaseTest {
     }
 
     public void navigateToPage() {
-        driver.get('https://qa.koel.app/);
+        driver.get"https://qa.koel.app/"
     }
 
     public void provideEmail(String email) {

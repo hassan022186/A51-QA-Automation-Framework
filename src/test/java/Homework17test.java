@@ -2,13 +2,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class Homework17test extends BaseTest {
+public class homework17test extends BaseTest {
 
     @Test
     public void addSongToPlaylist() throws InterruptedException {
         String songAddedMessage = "added 1 song into \"Hello.\"";
         //pre-condition
-        navigateToPage();
+        navigateToPage();https://qa.koel.app/
         provideEmail("hassan.mahim@testpro.io");
         providePassword("te$t$tudent");
         clickSubmit();
