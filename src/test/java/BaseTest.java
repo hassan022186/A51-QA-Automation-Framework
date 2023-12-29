@@ -36,11 +36,12 @@ public class BaseTest {
 
 
     public void navigateToPage() {
+
         driver.get("https://qa.koel.app/");
     }
 
     public void provideEmail(String email) {
-        WebElement emailField = driver.findElement(By.cssSelector("input[type='email']"));
+        WebElement emailField = driver.findElement(By.cssSelector("[type='email']"));
         emailField.clear();
         emailField.sendKeys(email);
     }
@@ -52,7 +53,8 @@ public class BaseTest {
     }
 
     public void clickSubmit() {
-        WebElement submit = driver.findElement(By.cssSelector("button[type='submit']"));
-        submit.click();
+        WebElement submitButton = driver.
+                findElement(By.cssSelector("button[type='submit']"));
+        submitButton.click();
     }
 }

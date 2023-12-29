@@ -7,7 +7,7 @@ public class Homework17 extends BaseTest {
 
     @Test
     public void addSongToPlaylist() throws InterruptedException {
-        String songAddedMessage = "added 1 song into \"Hello.\"";
+        String songAddedMessage = "added 1 song into \"Hello People.\"";
         //pre-condition
         navigateToPage();
         provideEmail("hassan.mahim@testpro.io");
@@ -25,7 +25,7 @@ public class Homework17 extends BaseTest {
     }
 
     public void searchSong(String name) throws InterruptedException {
-        WebElement searchField = driver.findElement(By.cssSelector("div#searchFrom input[type='search']"));
+        WebElement searchField = driver.findElement(By.cssSelector("input[type=search]"));
         searchField.sendKeys(name);
         Thread.sleep(2000);
     }
@@ -37,7 +37,7 @@ public class Homework17 extends BaseTest {
     }
 
     public void selectFirstSongResult() throws InterruptedException {
-        WebElement firstSong = driver.findElement(By.xpath("//section[@id='songResultWrapper']//tr[@class='song-item'][1]"));
+        WebElement firstSong = driver.findElement(By.xpath("//div[@class='song-result'][1]"));
         firstSong.click();
         Thread.sleep(2000);
     }
