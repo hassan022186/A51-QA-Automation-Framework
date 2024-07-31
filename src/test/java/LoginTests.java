@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,8 +19,10 @@ public class LoginTests extends BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         String url = "https://qa.koel.app/";
-        driver.get(url);
+        driver.get("https://qa.koel.app/#!/profile");
         Assert.assertEquals(driver.getCurrentUrl(), url);
         driver.quit();
+
+
     }
 }
