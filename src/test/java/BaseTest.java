@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import java.time.Duration;
 
@@ -12,6 +13,7 @@ public class BaseTest {
 
 
    public WebDriver driver;
+
 
    public String url="https://qa.koel.app";
    public void logIn(String email, String password){
