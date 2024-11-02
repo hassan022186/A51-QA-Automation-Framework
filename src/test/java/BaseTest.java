@@ -12,7 +12,6 @@ import java.time.Duration;
 
 public class BaseTest {
 
-
    public WebDriver driver;
 
 
